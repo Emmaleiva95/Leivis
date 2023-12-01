@@ -12,6 +12,8 @@ $color-blanco: #fff;
     background: url($image) center center/cover;
 }
 
+@import 'header';
+
 body {
     font-family: Verdana, Geneva, Tahoma;
     margin: 0;
@@ -24,42 +26,6 @@ body {
 }
 
 
-header{
-    background-color: $color-de-fondo;
-
-
-.listado-menu{
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    display: flex;
-    
-    li {
-        margin: 0px 10px;
-    }
-}
-}
-
-
-a {
-    text-decoration: none;
-    color: $color-negro;
-    
-}
-
-nav a {
-    font-weight: 600;
-
-    &:hover {
-            color:snow
-    }
-}
-
-
-
-.logo-img {
-    height: 40px;
-}
 
 
 
@@ -165,12 +131,28 @@ footer {
     }
 }
 
+.video{
+    width: 100%;
+    height: 600px;
+}
+
 @media (max-width:700px){
     header {
         flex-direction: column;
     }
     nav{
         padding: 10px 0px;
+    }
+    .video{
+        height: 400px;
+        width: 100%;
+    }
+}
+
+@media (max-width:450px){
+    .video{
+        height: 300px;
+        width: 100%;
     }
 }
 

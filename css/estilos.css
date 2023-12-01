@@ -1,14 +1,3 @@
-body {
-  font-family: Verdana, Geneva, Tahoma;
-  margin: 0;
-  background-color: lightgoldenrodyellow;
-}
-
-.contenedor {
-  width: 90%;
-  margin: auto;
-}
-
 header {
   background-color: burlywood;
 }
@@ -36,6 +25,17 @@ nav a:hover {
 
 .logo-img {
   height: 40px;
+}
+
+body {
+  font-family: Verdana, Geneva, Tahoma;
+  margin: 0;
+  background-color: lightgoldenrodyellow;
+}
+
+.contenedor {
+  width: 90%;
+  margin: auto;
 }
 
 .seccion-historia .contenedor {
@@ -136,12 +136,27 @@ footer .contenedor a:hover {
   transform: scale(1.1);
 }
 
+.video {
+  width: 100%;
+  height: 600px;
+}
+
 @media (max-width: 700px) {
   header {
     flex-direction: column;
   }
   nav {
     padding: 10px 0px;
+  }
+  .video {
+    height: 400px;
+    width: 100%;
+  }
+}
+@media (max-width: 450px) {
+  .video {
+    height: 300px;
+    width: 100%;
   }
 }
 /* SAMURAIS */
