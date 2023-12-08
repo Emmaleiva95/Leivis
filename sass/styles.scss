@@ -2,6 +2,23 @@ $color-de-fondo: burlywood;
 $color-negro: #000;
 $color-blanco: #fff;
 
+$redes: (
+    facebook:#3b5998,
+    instagram:#5B51D8,
+    youtube: #c4302b 
+);
+
+/* ICONOS REDES */
+footer .fa-youtube{
+    color: map-get($redes , youtube );
+}
+footer .fa-square-instagram{
+    color: map-get($redes , instagram );
+}
+footer .fa-facebook{
+    color: map-get($redes , facebook );
+}
+
 @mixin flex-styles {
     align-items: center;
     display: flex;
@@ -26,9 +43,27 @@ body {
 }
 
 
+@keyframes zoom {
+    0%{
+        transform: scale(0);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
 
-
-
+@keyframes fade {
+    0%{
+        opacity: 0;
+    }
+    100%{
+       opacity: 1;
+    }
+}
+.texto-introduccion{
+    animation-name: zoom;
+    animation-duration: 1.5s;
+}
 
 .seccion-historia .contenedor{
     display: flex;
@@ -41,6 +76,10 @@ body {
 }
 .seccion-historia .img-historia img{
     width: 100%;
+}
+.seccion-historia .img-francia{
+    animation-name: fade;
+    animation-duration: 2s;
 }
 
 /* SECCION FORM */
@@ -57,6 +96,15 @@ body {
         margin-top: 2rem;
         padding: 0.5rem 1rem;
     }
+}
+.seccion-form .formulario .btn-primary{
+    background-color: #fafad2;
+    color: #000;
+    border-color: #fafad2;
+    transition: all .3s ease;
+}
+.seccion-form .formulario .btn-primary:hover{
+    opacity: .6;
 }
 .seccion-form form .grupo-inputs{
     @include flex-styles;
